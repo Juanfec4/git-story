@@ -1,6 +1,6 @@
 import { IconBrandGithub, IconLink, IconMapPin } from "@tabler/icons-react";
 import { FC } from "react";
-import ShareButton from "./shareButton";
+import ShareButton from "./ShareButton";
 
 interface ProfileCardProps {
   data: any;
