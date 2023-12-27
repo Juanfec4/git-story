@@ -119,7 +119,7 @@ const Homepage: FC = () => {
           </p>
           {" | "}
           <a
-            href="https://github.com/Juanfec4"
+            href="https://github.com/Juanfec4/git-story"
             target="_blank"
             className="cursor-pointer border-b  text-amber-500/50 border-transparent hover:border-amber-500/50 hover:text-amber-500 transition duration-200 italic"
           >
