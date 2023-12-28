@@ -5,13 +5,17 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
 import DetailsPage from "./pages/DetailsPage";
+import LandingPage from "./pages/LandingPage";
 import Page404 from "./pages/page404";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/",
-    children: [{ path: "/details", element: <DetailsPage /> }],
+    children: [
+      { path: "/", element: <LandingPage /> },
+      { path: "/details", element: <DetailsPage /> },
+    ],
   },
   {
     path: "*",

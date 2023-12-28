@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import ErrorMessage from "../components/ErrorMessage";
 import LanguageList from "../components/LanguageList";
 import Loader from "../components/Loader";
@@ -12,6 +12,8 @@ import { getRepos, getUserDetails } from "../services/api";
 const DetailsPage: FC = () => {
   //Username params on url (for sharing purposes)
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const navigator = useNavigate();
 
   //Username
   const [username, setUsername] = useState<string>("");
@@ -126,6 +128,13 @@ const DetailsPage: FC = () => {
             className="cursor-pointer border-b  text-amber-500/50 border-transparent hover:border-amber-500/50 hover:text-amber-500 transition duration-200 italic"
           >
             Project repository
+          </a>
+          {" | "}
+          <a
+            onClick={() => navigator("/")}
+            className="cursor-pointer border-b  text-amber-500/50 border-transparent hover:border-amber-500/50 hover:text-amber-500 transition duration-200 italic"
+          >
+            Landing Page
           </a>
         </div>
       </footer>
