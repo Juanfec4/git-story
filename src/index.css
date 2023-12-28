@@ -10,4 +10,5 @@
 
 html {
   @apply scroll-smooth;
+  filter: hue-rotate(10deg);
 }
