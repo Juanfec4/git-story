@@ -47,7 +47,7 @@ const Timeline: FC<TimelineProps> = ({ repos }) => {
                   <span className="pr-1 text-amber-500/20">/</span>
                   {repo.name}
                 </h3>
-                <p className="rounded-sm bg-amber-500/20 max-w-min px-2  text-xs md:text-sm">
+                <p className="rounded-sm bg-amber-500/20 max-w-min px-2  text-xs md:text-sm min-w-max">
                   {new Date(repo.pushed_at).toLocaleDateString()}
                 </p>
               </div>
