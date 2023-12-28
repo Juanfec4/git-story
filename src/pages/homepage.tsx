@@ -14,17 +14,19 @@ const Homepage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   //Username
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState<string>("");
 
   //Fetch user data
   const userQuery = useQuery({
     queryFn: () => getUserDetails(username),
     queryKey: ["user", username.toUpperCase()],
+    enabled: username.length > 0,
   });
 
   const reposQuery = useQuery({
     queryFn: () => getRepos(username),
     queryKey: ["repos", username.toUpperCase()],
+    enabled: username.length > 0,
   });
 
   //Update params
