@@ -33,8 +33,8 @@ Why not use GitHub? Well you can, but this site is designed to be shared like a 
 - [React](https://react.dev/) - Web Framework
 - [TailwindCSS](https://tailwindcss.com/) - CSS Library
 - [Axios](https://axios-http.com/) - Request Library
-- [React Router](https://reactrouter.com/en/main) - Server Environment
-- [Tanstack Query (React Query)](https://tanstack.com/query/v3/) - Server Environment
+- [React Router](https://reactrouter.com/en/main) - Client routing
+- [Tanstack Query (React Query)](https://tanstack.com/query/v3/) - Opinionated Fetching Framework
 
 ## ✍️ Authors <a name = "authors"></a>
 
