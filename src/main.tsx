@@ -10,8 +10,8 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: "/details",
-    element: <DetailsPage />,
+    path: "/",
+    children: [{ path: "/details", element: <DetailsPage /> }],
   },
   {
     path: "*",
