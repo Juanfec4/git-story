@@ -76,7 +76,7 @@ const Timeline: FC<TimelineProps> = ({ repos }) => {
                   <div
                     style={{
                       backgroundColor:
-                        gitHubLangColors[repo.language].color || "",
+                        gitHubLangColors[repo?.language]?.color || "",
                     }}
                     className="h-3 w-3 rounded-full"
                   ></div>

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import "./index.css";
 import DetailsPage from "./pages/DetailsPage";
 import LandingPage from "./pages/LandingPage";
@@ -12,14 +13,20 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
+    element: (
+      <>
+        <ScrollToTop />
+        <Outlet />
+      </>
+    ),
     children: [
       { path: "/", element: <LandingPage /> },
       { path: "/details", element: <DetailsPage /> },
+      {
+        path: "*",
+        element: <Page404 />,
+      },
     ],
-  },
-  {
-    path: "*",
-    element: <Page404 />,
   },
 ]);
 
