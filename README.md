@@ -1,5 +1,3 @@
-<h1 align="center">GitStory</h1>
-
 ![Logo](https://github.com/Juanfec4/git-story/blob/main/public/images/gitStory.png?raw=true)
 
 [Live Site](https://git-story-rho.vercel.app/)
