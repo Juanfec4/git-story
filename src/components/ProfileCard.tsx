@@ -43,7 +43,7 @@ const ProfileCard: FC<ProfileCardProps> = ({ data }) => {
         >
           <IconLink />
         </a>
-        <ShareButton />
+        <ShareButton username={data.login} />
       </div>
     </div>
   );

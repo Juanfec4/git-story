@@ -22,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <LandingPage /> },
       { path: "/details", element: <DetailsPage /> },
+      { path: "/view/:id", element: <DetailsPage mode="view" /> },
       {
         path: "*",
         element: <Page404 />,

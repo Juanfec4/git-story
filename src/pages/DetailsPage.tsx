@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import ErrorMessage from "../components/ErrorMessage";
 import LanguageList from "../components/LanguageList";
 import Loader from "../components/Loader";
@@ -9,9 +9,14 @@ import SearchBox from "../components/SearchBox";
 import TextPlaceholder from "../components/TextPlaceholder";
 import Timeline from "../components/Timeline";
 import { getRepos, getUserDetails } from "../services/api";
-const DetailsPage: FC = () => {
+
+interface DetailsPageProps {
+  mode?: "view";
+}
+const DetailsPage: FC<DetailsPageProps> = ({ mode }) => {
   //Username params on url (for sharing purposes)
   const [searchParams, setSearchParams] = useSearchParams();
+  const { id } = useParams();
 
   const navigator = useNavigate();
 
@@ -41,6 +46,12 @@ const DetailsPage: FC = () => {
     }
   }, [searchParams]);
 
+  useEffect(() => {
+    if (id && mode === "view") {
+      setUsername(id);
+    }
+  }, [id]);
+
   //Extract data
   let userData = userQuery.data;
   let repos = reposQuery.data;
@@ -65,11 +76,15 @@ const DetailsPage: FC = () => {
        relative md:min-h-screen"
         >
           <div className="flex flex-col gap-2 md:sticky md:top-0">
-            <SearchBox
-              submitFn={(param) => {
-                setSearchParams({ user: param });
-              }}
-            />
+            {mode !== "view" ? (
+              <SearchBox
+                submitFn={(param) => {
+                  setSearchParams({ user: param });
+                }}
+              />
+            ) : (
+              <div className="h-14"></div>
+            )}
             {userQuery.isLoading && <Loader />}
             {userQuery.isSuccess && <ProfileCard data={userData} />}
             {reposQuery.isSuccess && <LanguageList repos={repos} />}
