@@ -63,7 +63,11 @@ const LandingPage: FC = () => {
             </div>
           </section>
           <section>
-            <img src={DesktopApp} alt="Desktop app mockup" className="-mt-24" />
+            <img
+              src={DesktopApp}
+              alt="Desktop app mockup"
+              className="md:-mt-24"
+            />
           </section>
         </main>
         <footer className="grid px-6 pb-6 grid-cols-8 h-full max-w-screen-lg mx-auto gap-2">
