@@ -9,7 +9,7 @@ import SearchBox from "../components/SearchBox";
 import TextPlaceholder from "../components/TextPlaceholder";
 import Timeline from "../components/Timeline";
 import { getRepos, getUserDetails } from "../services/api";
-const Homepage: FC = () => {
+const DetailsPage: FC = () => {
   //Username params on url (for sharing purposes)
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -133,4 +133,4 @@ const Homepage: FC = () => {
   );
 };
 
-export default Homepage;
+export default DetailsPage;

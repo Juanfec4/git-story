@@ -4,14 +4,14 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import Homepage from "./pages/homepage";
+import DetailsPage from "./pages/DetailsPage";
 import Page404 from "./pages/page404";
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
     path: "/details",
-    element: <Homepage />,
+    element: <DetailsPage />,
   },
   {
     path: "*",
