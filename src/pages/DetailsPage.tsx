@@ -57,9 +57,9 @@ const DetailsPage: FC<DetailsPageProps> = ({ mode }) => {
   let repos = reposQuery.data;
 
   return (
-    <div className="w-screen min-h-screen h-full bg-zinc-900">
+    <div className="w-screen min-h-screen h-full bg-zinc-950 background-grid">
       <header className="grid px-6 pt-6 grid-cols-8 h-full max-w-screen-lg mx-auto gap-2">
-        <div className="bg-zinc-950/30 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6">
+        <div className="bg-zinc-900 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6">
           <h1 className=" font-work-sans text-center text-slate-200 font-light text-4xl tracking-tighter">
             Git<span className="text-amber-500 font-normal">Story</span>
           </h1>
@@ -91,10 +91,10 @@ const DetailsPage: FC<DetailsPageProps> = ({ mode }) => {
             {userQuery.isError && <ErrorMessage error={userQuery.error} />}
             {!userQuery.isSuccess && (
               <>
-                <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+                <div className="p-4 bg-zinc-900 rounded-md text-slate-200">
                   <TextPlaceholder />
                 </div>
-                <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+                <div className="p-4 bg-zinc-900 rounded-md text-slate-200">
                   <TextPlaceholder />
                 </div>
               </>
@@ -105,19 +105,19 @@ const DetailsPage: FC<DetailsPageProps> = ({ mode }) => {
           {userQuery.isSuccess && <Timeline repos={repos} />}
           {!userQuery.isSuccess && (
             <div className="flex flex-col gap-2">
-              <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+              <div className="p-4 bg-zinc-900 rounded-md text-slate-200">
                 <TextPlaceholder />
               </div>
-              <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+              <div className="p-4 bg-zinc-900  rounded-md text-slate-200">
                 <TextPlaceholder />
               </div>
-              <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+              <div className="p-4 bg-zinc-900  rounded-md text-slate-200">
                 <TextPlaceholder />
               </div>
-              <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+              <div className="p-4 bg-zinc-900  rounded-md text-slate-200">
                 <TextPlaceholder />
               </div>
-              <div className="p-4 bg-zinc-950/30 rounded-md text-slate-200">
+              <div className="p-4 bg-zinc-900  rounded-md text-slate-200">
                 <TextPlaceholder />
               </div>
             </div>
@@ -125,7 +125,7 @@ const DetailsPage: FC<DetailsPageProps> = ({ mode }) => {
         </div>
       </main>
       <footer className="grid px-6 pb-6 grid-cols-8 h-full max-w-screen-lg mx-auto gap-2">
-        <div className="bg-zinc-950/30 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6 text-slate-200 font-sm text-center flex justify-start gap-4">
+        <div className="bg-zinc-900 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6 text-slate-200 font-sm text-center flex justify-start gap-4">
           <p>
             Made by{" "}
             <a

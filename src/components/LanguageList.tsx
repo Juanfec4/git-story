@@ -49,7 +49,7 @@ const LanguageList: FC<LanguageListProps> = ({ repos }) => {
   }, [repos]); // Include repos in the dependency array
 
   return (
-    <div className="font-work-sans text-sm bg-zinc-950/30 p-6 rounded-md">
+    <div className="font-work-sans text-sm bg-zinc-900 p-6 rounded-md">
       <div className="flex flex-wrap gap-6 justify-center">
         <h3 className="w-full text-center text-slate-200 text-lg font-light">
           Top Languages

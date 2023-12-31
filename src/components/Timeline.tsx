@@ -41,7 +41,7 @@ const Timeline: FC<TimelineProps> = ({ repos }) => {
       <div className=" text-slate-200 font-work-sans flex flex-col gap-2">
         {repos.map((repo: Repo) => {
           return (
-            <div key={repo.node_id} className=" bg-zinc-950/30 p-4 rounded-md">
+            <div key={repo.node_id} className=" bg-zinc-900 p-4 rounded-md">
               <div className="flex  justify-between items-center">
                 <h3 className=" text-lg sm:text-xl md:text-2xl font-light max-w-64 truncate">
                   <span className="pr-1 text-amber-500/20">/</span>

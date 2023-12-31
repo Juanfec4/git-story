@@ -10,7 +10,7 @@ const SearchBox: FC<SearchBoxProps> = ({ submitFn }) => {
 
   useEnter(() => submitFn(param));
   return (
-    <div className="bg-zinc-950/30 rounded-md text-slate-200 font-work-sans flex p-4 focus-within:ring-1 ring-amber-500/30 justify-between">
+    <div className="bg-zinc-900 rounded-md text-slate-200 font-work-sans flex p-4 focus-within:ring-1 ring-amber-500/30 justify-between">
       <input
         className="bg-transparent outline-none ring-0 w-full"
         value={param}

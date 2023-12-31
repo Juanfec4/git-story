@@ -7,7 +7,7 @@ interface ProfileCardProps {
 }
 const ProfileCard: FC<ProfileCardProps> = ({ data }) => {
   return (
-    <div className="flex flex-col items-start gap-1 p-4 bg-zinc-950/30 rounded-md text-slate-200 font-work-sans">
+    <div className="flex flex-col items-start gap-1 p-4 bg-zinc-900 rounded-md text-slate-200 font-work-sans">
       <img
         src={data.avatar_url}
         className=" rounded-full h-20 w-20 self-center"

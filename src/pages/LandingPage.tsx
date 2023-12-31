@@ -6,10 +6,10 @@ import PhoneApp from "../assets/mockups/phone.png";
 const LandingPage: FC = () => {
   const navigator = useNavigate();
   return (
-    <div className="w-screen min-h-screen h-full bg-zinc-900 font-work-sans text-slate-200 overflow-x-hidden">
+    <div className="w-screen min-h-screen h-full bg-zinc-950 font-work-sans text-slate-200 overflow-x-hidden background-grid">
       <div className="max-w-screen-lg mx-auto">
         <header className="p-6 flex flex-col gap-6">
-          <div className="flex w-full bg-zinc-800/30 items-center justify-between p-6">
+          <div className="flex w-full bg-zinc-900 items-center justify-between p-6 rounded-md">
             <h1 className="font-work-sans text-center text-slate-200 font-light text-4xl tracking-tighter rounded-md">
               Git<span className="text-amber-500 font-normal">Story</span>
             </h1>
@@ -71,7 +71,7 @@ const LandingPage: FC = () => {
           </section>
         </main>
         <footer className="grid px-6 pb-6 grid-cols-8 h-full max-w-screen-lg mx-auto gap-2">
-          <div className="bg-zinc-950/30 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6 text-slate-200 font-sm text-center flex justify-start gap-4">
+          <div className="bg-zinc-900 col-start-1 col-end-9 sm:col-start-2 sm:col-end-8  md:col-start-1 md:col-end-9 rounded-md p-6 text-slate-200 font-sm text-center flex justify-start gap-4">
             <p>
               Made by{" "}
               <a

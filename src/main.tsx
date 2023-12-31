@@ -14,10 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <>
+      <div>
         <ScrollToTop />
         <Outlet />
-      </>
+      </div>
     ),
     children: [
       { path: "/", element: <LandingPage /> },
